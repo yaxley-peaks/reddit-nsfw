@@ -22,6 +22,6 @@ fn main() {
     let sort = handle_sort_enum(args.sort);
     let res = get_posts(&args.sub, sort, 25);
     res.iter().for_each(|x| {
-        println!("https://www.reddit.com/{x}");
+        println!("https://www.reddit.com{x}");
     });
 }
