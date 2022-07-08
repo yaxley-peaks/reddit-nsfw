@@ -117,3 +117,5 @@ pub fn get_posts(sub: &str, _sort: SortBy, lim: u32) -> Vec<String> {
     }
     res
 }
+
+

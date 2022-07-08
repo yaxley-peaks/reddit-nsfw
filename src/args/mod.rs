@@ -15,4 +15,6 @@ pub struct Opts {
     pub sub: String,
     #[clap(short = 'o', arg_enum, value_parser, default_value_t = SortBy::Hot)]
     pub sort: crate::args::SortBy,
+    #[clap(short = 'n', default_value_t = 25)]
+    pub lim: u32,
 }
