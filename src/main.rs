@@ -1,11 +1,11 @@
-use roux::Subreddit;
-fn main() {
-    let sub = Subreddit::new("196");
-    let hot = sub.hot(25, None).unwrap();
+pub mod args;
+use clap::Parser;
+use reddit_nsfw::{get_posts, args::SortBy};
 
-    hot.data.children.iter().for_each(|thing| {
-        if thing.data.over_18 {
-            println!("https://www.reddit.com/{}", thing.data.permalink)
-        }
+fn main() {
+    let args = args::Opts::parse();
+    let res = get_posts(&args.sub, SortBy::Hot, 25);
+    res.iter().for_each(|x| {
+        println!("{x}");
     });
 }

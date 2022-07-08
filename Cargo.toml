@@ -8,3 +8,4 @@ edition = "2021"
 [dependencies]
 
 roux = { version = "2.0.0", features = ["blocking"] }
+clap = { version = "3.2.8", features = ["derive"] }
