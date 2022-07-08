@@ -1,4 +1,13 @@
-## Get nsfw posts from a subreddit.
+# Get nsfw posts from a subreddit.
+
+
+## Installation
+- Prerequisites:
+  - Rust and Cargo
+
+Run: `cargo install --path .`
+
+## Usage
 
 ```
 reddit-nsfw 
