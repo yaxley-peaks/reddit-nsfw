@@ -1,7 +1,6 @@
-use clap::{Parser, clap_derive::ArgEnum};
+use clap::{clap_derive::ArgEnum, Parser};
 
-
-#[derive(Debug,Copy, Clone, PartialEq, Eq, PartialOrd, Ord, ArgEnum)]
+#[derive(Debug, Copy, Clone, PartialEq, Eq, PartialOrd, Ord, ArgEnum)]
 pub enum SortBy {
     Top,
     Hot,
